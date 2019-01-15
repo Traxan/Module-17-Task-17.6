@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Login
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='mainsite.css', type='text/css')
+  body.app
+    .container
+      .panel
+        h2.panel__title Sign in 
+        form.form(action='/auth/google')
+          label.form__label(for='input-username') username:
+          input#input-username.form__input(type='text', name='username')
+          label.form__label(for='input-pass') password:
+          input#input-pass.form__input(type='password')
+          button.form__button(type='submit') Login
+        a.panel__link(href='/auth/google') Google+
